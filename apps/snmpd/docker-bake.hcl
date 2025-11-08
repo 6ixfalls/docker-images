@@ -1,16 +1,16 @@
 target "docker-metadata-action" {}
 
 variable "APP" {
-  default = "kubectl"
+  default = "snmpd"
 }
 
 variable "VERSION" {
-  // renovate: datasource=docker depName=registry.k8s.io/kubectl
-  default = "v1.34.1"
+  // renovate: datasource=repology depName=ubuntu_24_04/net-snmp versioning=loose
+  default = "5.9.4+dfsg-1.1ubuntu3.1"
 }
 
 variable "SOURCE" {
-  default = "https://github.com/kubernetes/kubectl"
+  default = "https://github.com/net-snmp/net-snmp"
 }
 
 group "default" {
